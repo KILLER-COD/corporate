@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/font-famyly.css">
@@ -9,7 +10,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
 <header class="header header-inner-top">
     <div class="container">
         <div class="row">
@@ -37,6 +41,7 @@
         </div>
     </div>
 </header>
+
 
 <section class="slider">
     <div class="slider-inner">
@@ -429,7 +434,7 @@
                 </div>
             </div>
         </a>
-        <a class="gallery-inner-4 gallery-inner" style=" top:324px" href="#">
+        <a class="gallery-inner-4 gallery-inner" href="#">
             <div class="gallery-inner-box">
                 <img src="image/blog-30.jpg" alt="">
                 <div class="gallery-box-info">
@@ -463,6 +468,33 @@
 </section>
 
 
+<section class="price">
+    <div class="container">
+        <div class="row">
+            <div class="price-inner-info">
+                <h2>Our Price</h2>
+                <h3>Plans</h3>
+                <div class="dark-line left"></div>
+                <p>Curabitur blandit eros justo, in tincidunt nulla posuere eu. Nulla ultrices velit eros,
+                    nec porttitor ipsum scelerisque nec. Ut porta hendrerit tristique</p>
+            </div>
+            <div class="price-inner-cart">
+                <div class="price-cart">
+                    <h2>Basic</h2>
+                    <h3><span>$</span>21</h3>
+                    <span>month</span>
+                    <ul>
+                        <li>10Gb Data Storage </li>
+                        <li>1 Domain Name </li>
+                        <li>1 USER </li>
+                        <li>Full Access </li>
+                    </ul>
+                    <a href="#">sign up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -475,6 +507,7 @@
 
         let show_about = true;
         $(document).scroll(function () {
+
             let $menu = $(".header-inner-top");
             let $menu_items  =$(".header-inner-item");
             let $menu_items_logo  =$(".header-inner-item-logo");
@@ -505,9 +538,13 @@
 
 
         $( window ).resize(function() {
-            let gall_1_img_hight =$(".gallery-inner-1 img").height() ;
-            let gall_2_img_hight =$(".gallery-inner-2 img").height() ;
+            let gall_1_img_hight = $(".gallery-inner-1 img").height() ;
+            let gall_4_img_hight = $(".gallery-inner-4 img").height();
+            let gall_2_img_hight = $(".gallery-inner-2 img").height() ;
+            let gall_hight = gall_1_img_hight + gall_4_img_hight;
 
+
+            $(".portfolio-gallery").css({height: gall_hight});
             $(".gallery-inner-4").css({top: gall_1_img_hight});
             $(".gallery-inner-5").css({top: gall_2_img_hight});
             $(".gallery-inner-6").css({top: gall_1_img_hight});

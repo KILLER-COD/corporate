@@ -35,14 +35,18 @@ body {
 .container {
   width: 1170px;
   margin: 0 auto;
+
 }
 
 .row {
   padding: 0 15px;
+
 }
 
+/*---header start--*/
+
 .header {
-  z-index: 1010;
+  z-index: 9999;
   height: 100px;
   position: fixed;
   top: 0;
@@ -103,7 +107,7 @@ body {
 
   &-menu-list {
     & li {
-      display: inline;
+      display: inline-block;
       list-style:none ;
       color: white;
 
@@ -125,6 +129,11 @@ body {
   }
 }
 
+/*---header End--*/
+
+
+/*---slider start--*/
+
 .slider {
   height: 660px;
   width: 100%;
@@ -132,12 +141,12 @@ body {
   &-inner {
     height: 100%;
     width: 100%;
+    position: relative;
 
     &-prev {
       position: absolute;
-      top: 45%;
-      left: 3%;
-      right: auto;
+      top: 50%;
+      left: 1%;
       z-index: 1000;
       writing-mode: vertical-rl;
       text-orientation: upright;
@@ -146,12 +155,13 @@ body {
       text-transform: uppercase;
       letter-spacing: 3px;
       padding: 5px;
+      transform: translateY(-50%);
     }
 
     &-next {
       position: absolute;
-      top: 45%;
-      right: 3%;
+      top: 50%;
+      right: 1%;
       left: auto;
       z-index: 1000;
       writing-mode: vertical-rl;
@@ -161,6 +171,7 @@ body {
       text-transform: uppercase;
       letter-spacing: 3px;
       padding: 5px;
+      transform: translateY(-50%);
     }
 
       &-item{
@@ -228,20 +239,21 @@ body {
   cursor: pointer;
   font-weight: 400;
   font-size: 13px;
-  line-height: 15px;
   margin-left: 10px;
   text-align: center;
   padding: 10px 30px;
-  white-space: nowrap;
   letter-spacing: 1px;
   background: #47494D;
-  display: inline-block;
   text-decoration: none;
   text-transform: capitalize;
   border: 2px solid #47494D;
-  font-family: 'Open Sans', sans-serif;
   border-radius: 5px;
-  box-shadow: none;
+}
+
+.our_items:hover {
+  background-color: white;
+  color: black;
+  transition-duration: 0.6s;
 }
 
 .slider .learn_more {
@@ -249,20 +261,26 @@ body {
   cursor: pointer;
   font-weight: 400;
   font-size: 13px;
-  line-height: 15px;
   margin-left: 10px;
   text-align: center;
   padding: 10px 30px;
-  white-space: nowrap;
   letter-spacing: 1px;
-  display: inline-block;
   text-decoration: none;
   text-transform: capitalize;
   border: 2px solid white;
-  font-family: 'Open Sans', sans-serif;
   border-radius: 5px;
-  box-shadow: none;
 }
+
+.learn_more:hover {
+  background-color: white;
+  color: black;
+  transition-duration: 0.6s;
+}
+
+/*---slider End--*/
+
+
+/*---create start--*/
 
 .create-site {
   padding: 100px 0;
@@ -295,6 +313,9 @@ body {
   }
 }
 
+/*---create End--*/
+
+/*---service start--*/
 
 .service {
   padding-bottom: 100px;
@@ -359,6 +380,11 @@ body {
 
   }
 }
+
+/*---service end--*/
+
+
+/*---social start--*/
 
 
 .social {
@@ -426,6 +452,10 @@ body {
     font-family : "Open Sans", sans-serif;
   }
 }
+
+/*---social End--*/
+
+/*---made Start--*/
 
 .made {
 
@@ -496,6 +526,7 @@ body {
       & .made-inner-text:not(.last) {
         margin: 0;
       }
+
       & a {
         border: 1px solid black;
         text-decoration: none;
@@ -508,9 +539,18 @@ body {
         text-transform: uppercase;
         letter-spacing: 1px;
       }
+
+      & a:hover {
+        background-color: black;
+        color: white;
+        transition-duration: 0.6s;
+      }
+
     }
   }
 }
+
+/*---made End--*/
 
 .busines {
 
@@ -1013,6 +1053,7 @@ body {
   &-gallery{
     position: relative;
     width: 100%;
+    height: 1055px;
   }
 
 }
@@ -1113,7 +1154,37 @@ body {
   &-inner-box img{
     width: 100%;
   }
-
-
 }
 
+.price {
+  position: relative;
+  margin-top: 150px;
+
+  &-inner-info {
+    width: 33.3337%;
+
+    & h2 {
+      font-size: 50px;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+    }
+
+    & h3 {
+      font-size: 35px;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+      color: #c9c9c9;
+    }
+
+    & p {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  &-inner-cart {
+
+  }
+}
