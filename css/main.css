@@ -318,12 +318,20 @@ body {
   gap: 1px;
   justify-content: space-between;
   align-items: center;
-  background-color: #f2f2f2;
 }
 .service-inner-items {
   width: 33.27%;
   padding: 60px 15px 50px 15px;
-  background-color: white;
+}
+.service-inner-items {
+  border-right: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+.service-inner-items:nth-child(3), .service-inner-items:nth-child(6) {
+  border-right: 0;
+}
+.service-inner-items:nth-child(4), .service-inner-items:nth-child(5), .service-inner-items:nth-child(6) {
+  border-bottom: 0;
 }
 .service-inner-items:hover {
   background-color: #f3f3f3;
